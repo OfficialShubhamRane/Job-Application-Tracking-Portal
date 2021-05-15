@@ -39,5 +39,54 @@ public class EditUserProfileControllerTest {
                 .andExpect(MockMvcResultMatchers.view().name("EditUserProfileView.html"))
                 .andExpect(MockMvcResultMatchers.forwardedUrl("EditUserProfileView.html"));
     }
+
+    @Test
+    public void testEditUserProfile3() throws Exception {
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/edit-user-profile");
+        MockMvcBuilders.standaloneSetup(this.editUserProfileController)
+                .build()
+                .perform(requestBuilder)
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.model().size(0))
+                .andExpect(MockMvcResultMatchers.view().name("EditUserProfileView.html"))
+                .andExpect(MockMvcResultMatchers.forwardedUrl("EditUserProfileView.html"));
+    }
+
+    @Test
+    public void testEditUserProfile4() throws Exception {
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/edit-user-profile", "Uri Vars");
+        MockMvcBuilders.standaloneSetup(this.editUserProfileController)
+                .build()
+                .perform(requestBuilder)
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.model().size(0))
+                .andExpect(MockMvcResultMatchers.view().name("EditUserProfileView.html"))
+                .andExpect(MockMvcResultMatchers.forwardedUrl("EditUserProfileView.html"));
+    }
+
+    @Test
+    public void testUpdateUserProfileInfo() throws Exception {
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/update-profile");
+        MockMvcBuilders.standaloneSetup(this.editUserProfileController)
+                .build()
+                .perform(requestBuilder)
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.model().size(0))
+                .andExpect(MockMvcResultMatchers.view().name("EditUserProfileView.html"))
+                .andExpect(MockMvcResultMatchers.forwardedUrl("EditUserProfileView.html"));
+    }
+
+    @Test
+    public void testUpdateUserProfileInfo2() throws Exception {
+        MockHttpServletRequestBuilder getResult = MockMvcRequestBuilders.get("/update-profile");
+        getResult.contentType("Not all who wander are lost");
+        MockMvcBuilders.standaloneSetup(this.editUserProfileController)
+                .build()
+                .perform(getResult)
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.model().size(0))
+                .andExpect(MockMvcResultMatchers.view().name("EditUserProfileView.html"))
+                .andExpect(MockMvcResultMatchers.forwardedUrl("EditUserProfileView.html"));
+    }
 }
 

@@ -12,4 +12,10 @@ public class EditUserProfileController {
         return "EditUserProfileView.html";
     }
 
+    @GetMapping("/update-profile")
+    public String updateUserProfileInfo(){
+        System.out.println("Updated new Info");
+        return "EditUserProfileView.html";
+    }
+
 }
