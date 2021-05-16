@@ -4,11 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class GeneralController {
+public class DashboardController {
 
-    @GetMapping("/Dashboard")
+    @GetMapping("/dashboard")
     public String getDashboard(){
-        System.out.println("In the Dashboard");
         return "DashboardView.html";
     }
+
+
 }

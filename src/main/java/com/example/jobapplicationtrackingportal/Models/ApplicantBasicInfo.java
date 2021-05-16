@@ -1,7 +1,13 @@
 package com.example.jobapplicationtrackingportal.Models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class ApplicantBasicInfo {
 
+    @Id
     private String fname;
     private String lname;
 
@@ -28,4 +34,5 @@ public class ApplicantBasicInfo {
                 ", lname='" + lname + '\'' +
                 '}';
     }
+
 }

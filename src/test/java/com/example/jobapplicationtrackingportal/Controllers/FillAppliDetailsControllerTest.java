@@ -24,8 +24,8 @@ public class FillAppliDetailsControllerTest {
                 .perform(requestBuilder)
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.model().size(0))
-                .andExpect(MockMvcResultMatchers.view().name("fillUpApplicationDetailsView.html"))
-                .andExpect(MockMvcResultMatchers.forwardedUrl("fillUpApplicationDetailsView.html"));
+                .andExpect(MockMvcResultMatchers.view().name("FillUpApplicationDetailsView.html"))
+                .andExpect(MockMvcResultMatchers.forwardedUrl("FillUpApplicationDetailsView.html"));
     }
 
     @Test
@@ -37,8 +37,8 @@ public class FillAppliDetailsControllerTest {
                 .perform(requestBuilder)
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.model().size(0))
-                .andExpect(MockMvcResultMatchers.view().name("fillUpApplicationDetailsView.html"))
-                .andExpect(MockMvcResultMatchers.forwardedUrl("fillUpApplicationDetailsView.html"));
+                .andExpect(MockMvcResultMatchers.view().name("FillUpApplicationDetailsView.html"))
+                .andExpect(MockMvcResultMatchers.forwardedUrl("FillUpApplicationDetailsView.html"));
     }
 }
 

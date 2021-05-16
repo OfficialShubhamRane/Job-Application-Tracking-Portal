@@ -8,7 +8,6 @@ public class ApplyForCompanyController {
 
     @GetMapping("/apply-for-company")
     public String applyForCompany(){
-        System.out.println("Applying for company");
         return "ApplyForCompanyView.html";
     }
 }

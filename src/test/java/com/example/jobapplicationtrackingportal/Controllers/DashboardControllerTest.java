@@ -10,16 +10,16 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-@ContextConfiguration(classes = {GeneralController.class})
+@ContextConfiguration(classes = {DashboardController.class})
 @ExtendWith(SpringExtension.class)
-public class GeneralControllerTest {
+public class DashboardControllerTest {
     @Autowired
-    private GeneralController generalController;
+    private DashboardController dashboardController;
 
     @Test
     public void testGetDashboard() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/Dashboard");
-        MockMvcBuilders.standaloneSetup(this.generalController)
+        MockMvcBuilders.standaloneSetup(this.dashboardController)
                 .build()
                 .perform(requestBuilder)
                 .andExpect(MockMvcResultMatchers.status().isOk())
@@ -31,7 +31,7 @@ public class GeneralControllerTest {
     @Test
     public void testGetDashboard2() throws Exception {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/Dashboard", "Uri Vars");
-        MockMvcBuilders.standaloneSetup(this.generalController)
+        MockMvcBuilders.standaloneSetup(this.dashboardController)
                 .build()
                 .perform(requestBuilder)
                 .andExpect(MockMvcResultMatchers.status().isOk())

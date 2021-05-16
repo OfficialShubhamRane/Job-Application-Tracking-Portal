@@ -14,5 +14,6 @@ public class ApplicantBasicInfoTest {
         assertEquals("Lname", actualApplicantBasicInfo.getLname());
         assertEquals("ApplicantBasicInfo{fname='Fname', lname='Lname'}", actualApplicantBasicInfo.toString());
     }
+
 }
 
