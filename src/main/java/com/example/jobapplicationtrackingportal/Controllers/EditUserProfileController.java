@@ -23,6 +23,16 @@ public class EditUserProfileController {
         return "EditUserProfileView.html";
     }
 
-    
+    @GetMapping("/update-profile/{fname}/{lname}")
+    @ResponseBody
+    public ApplicantBasicInfo updateUserProfileInfo(
+            @PathVariable("fname")String fname,
+            @PathVariable("lname")String lname
+    ){
+        ApplicantBasicInfo applicantBasicInfo = new ApplicantBasicInfo();
+        applicantBasicInfo.setLname(fname);
+        applicantBasicInfo.setLname(lname);
+        return applicantBasicInfo;
+    }
 
 }
